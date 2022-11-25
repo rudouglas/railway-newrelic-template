@@ -30,14 +30,14 @@ service:
   extensions: [health_check]
   pipelines:
     metrics:
-      receivers: [otlphttp]
+      receivers: [otlp]
       processors: [cumulativetodelta, batch]
       exporters: [logging, otlphttp]
     traces:
-      receivers: [otlphttp]
+      receivers: [otlp]
       processors: [transform, batch]
       exporters: [logging, otlphttp]
     logs:
-      receivers: [otlphttp, fluentforward]
+      receivers: [otlp, fluentforward]
       processors: [transform, batch]
       exporters: [logging, otlphttp]
