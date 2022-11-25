@@ -1,7 +1,6 @@
 FROM newrelic/infrastructure:latest
 
-RUN -d \
-  --name newrelic-infra \
+RUN --name newrelic-infra \
   --network=host \
   --cap-add=SYS_PTRACE \
   --privileged \
