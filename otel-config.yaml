@@ -4,6 +4,7 @@ receivers:
   otlp:
     protocols:
       grpc:
+      http:
   fluentforward:
     endpoint: 0.0.0.0:8006
 processors:
